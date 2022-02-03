@@ -1,0 +1,123 @@
+*{
+    margin:0; padding:0;
+}
+body{
+    overflow-X:hidden;
+}
+.red{
+    background-color:red !important;
+}
+h1{
+    font-family:Arial, Helvetica, sans-serif;
+}
+/* header */
+header{
+    display:flex; justify-content:space-between; padding:0px 30px;
+    position:fixed; top:0; left:0; width:100%; z-index:1000;
+    transform:translateX(0px); 
+}
+header nav ul{
+    display:flex; padding-top:15px;
+}
+header nav ul li{
+    margin-right:30px; list-style:none;
+}
+header nav ul li a{
+    text-decoration:none; color:white; transition:all 0.3s;
+}
+header nav ul li a:hover{
+    color:wheat; 
+}
+header nav ul li a .par{
+    transition:all 1.5s;
+}
+header nav ul li a .par:hover{
+   transform:rotate(360deg);
+}
+.show{
+     transform:translateX(0px);
+}
+@media (max-width:800px) {
+    .fa-bars{
+        display:block !important;  
+    }
+    #h11{
+        display:block !important;
+    }
+    header{
+        width:100%; position: relative;
+        transform:translateX(-1000px); transition:0.5s;
+    }
+    header nav{
+        position:absolute; top:0%; left:0%;
+        width:100%;
+         height:100vh;
+    }
+    header nav ul{
+        display:flex; flex-direction:column; 
+         margin:auto; top:20%; 
+        position:absolute; left:50%;
+        transform:translateX(-50%);
+    }
+    header ul li{
+        margin-bottom:30px;
+    }
+    header ul li a{
+       padding:4px 600px; transition:0.3s;
+    }
+    header ul li a:hover{
+        background-color:white; color:blue !important;
+    }
+}
+/* Home */
+.home{
+    background-image:url("../img/reseau.jpg"); background-repeat:no-repeat;
+    background-size:cover; width:100%; height:100vh;
+    display:flex; justify-content:center; align-items:center;
+    position:relative; 
+}
+.home:before{
+    
+    width:100%; height:100%; background-color:rgba(0,0,0,0.55);
+    z-index:2 !important; content:""; position:absolute;
+}
+#row_down{ 
+    animation:rowdown 4s linear 0s infinite backwards alternate;
+}
+@keyframes rowdown{
+    0%{
+        transform:translateY(0px);
+    }
+    100%{
+        transform:translateY(200px);
+    }
+}
+/* developement digital */
+.dev{
+    width:85%; margin:auto;
+}
+/* filieres */
+.filieres{
+    width:85%; margin:auto;
+}
+.filieres .cards{
+    display:flex; justify-content:space-evenly; flex-wrap:wrap;
+}
+.filieres .cards .card{
+    margin-bottom:16px;
+}
+.filieres .cards .card img{
+    height:200px;
+}
+/* footer */
+footer a{
+    transition:0.3s;
+}
+footer a:hover{
+    color:blue !important;
+}
+@media (max-width:1300px) {
+    .inscription{
+        width:80%; margin:40px auto; 
+    }
+}

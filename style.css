@@ -1,0 +1,234 @@
+*{
+    margin:0; padding:0;
+}
+body{
+    overflow-X:hidden;
+}
+.red{
+    background-color:red !important;
+}
+h1{
+    font-family:Arial, Helvetica, sans-serif;
+}
+/* header */
+header{
+    display:flex; justify-content:space-between; padding:0px 30px;
+    position:fixed; top:0; left:0; width:100%; z-index:1000;
+    transform:translateX(0px); 
+}
+header nav ul{
+    display:flex; padding-top:15px;
+}
+header nav ul li{
+    margin-right:30px; list-style:none;
+}
+header nav ul li a{
+    text-decoration:none; color:white; transition:all 0.3s;
+}
+header nav ul li a:hover{
+    color:wheat; 
+}
+header nav ul li a .par{
+    transition:all 1.5s;
+}
+header nav ul li a .par:hover{
+   transform:rotate(360deg);
+}
+.show{
+     transform:translateX(0px);
+}
+/* Home */
+.home{
+    background-image:url("img/backg.jpg"); background-repeat:no-repeat;
+    background-size:cover; width:100%; height:100vh;
+    display:flex; justify-content:center; align-items:center;
+    position:relative; 
+}
+.home:before{
+    
+    width:100%; height:100%; background-color:rgba(0,0,0,0.55);
+    z-index:2 !important; content:""; position:absolute;
+}
+#row_down{ 
+    animation:rowdown 4s linear 0s infinite backwards alternate;
+}
+@keyframes rowdown{
+    0%{
+        transform:translateY(0px);
+    }
+    100%{
+        transform:translateY(200px);
+    }
+}
+/* filieres */
+.filieres{
+    width:85%; margin:auto;
+}
+.filieres .cards{
+    display:flex; justify-content:space-evenly; flex-wrap:wrap;
+}
+.filieres .cards .card{
+    margin-bottom:16px;
+}
+.filieres .cards .card img{
+    height:200px;
+}
+/* about us */
+.about{
+    width:85%; margin:auto; 
+}
+.about ul li{
+    list-style-type:none;
+}
+.about .a_domain{
+    text-decoration:none;
+}
+.about .cards{
+    display:flex; justify-content:space-evenly; flex-wrap:wrap;
+}
+.about .cards .card{
+    margin-bottom:16px;
+}
+.about .cards .card img{
+    height:200px;
+}
+/* sharit */
+#sharit{
+    width:100%;
+    height:280px;
+    margin-bottom:10px;
+    background-image:url("img/technologie.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center bottom;
+    position:relative;
+}
+#sharit:before{
+    content:""; position:absolute; width:100%; height:100%;
+    background-color:rgba(0,0,0,0.55); 
+}
+.text_sharit{
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+}
+/* les statistiques */
+.statistiques{
+    width:85%; margin:40px auto; display:flex; flex-wrap:wrap;
+    justify-content:space-evenly;
+}
+.stat{
+    text-align:center; margin-bottom:16px;
+    padding:10px 14px; transition:0.3s; width:300px;
+}
+.stat:hover{
+    box-shadow:1px 1px 10px rgb(0, 0, 0);
+}
+/* statistique */
+#etudiant1{
+    transition:1s;
+}
+/* inscription */
+.inscription{
+    width:70%; margin:40px auto; 
+}
+.inscription #full_name{
+     display:flex; justify-content:space-between;
+}
+.inscription #contacter{
+    display:flex; justify-content:space-between;
+}
+.inscription #file,#niveau{
+    display:flex; width:50%; justify-content:space-between;
+}
+.inscription select{
+    background-color:black; color:white;
+}
+.inscription #sex .sex_div{
+    display:flex; flex-direction:column;
+}
+/* contact Us */
+.contactUs{
+    width:85%; margin:auto; 
+}
+.contactUs form{
+    display:flex; flex-direction:column;
+}
+/* footer */
+footer a{
+    transition:0.3s;
+}
+footer a:hover{
+    color:blue !important;
+}
+@media (max-width:1300px) {
+    .inscription{
+        width:80%; margin:40px auto; 
+    }
+}
+@media (max-width:1040px) {
+    .inscription form #full_name{
+        display:flex; flex-direction:column;
+    }
+    .inscription form #contacter{
+        display:flex; flex-direction:column;
+    }
+    .inscription form{
+        width:85% !important; 
+        margin:auto; position:relative;
+    }
+    .inscription form .form-control{
+          width:100% !important;
+          
+    }
+}
+@media (max-width:960px) {
+    .inscription #file,#niveau{
+        display:flex; width:100%; justify-content:space-between;
+    }
+}
+@media (max-width:800px) {
+    .fa-bars{
+        display:block !important;  
+    }
+    #h11{
+        display:block !important;
+    }
+    header{
+        width:100%; position: relative;
+        transform:translateX(-1000px); transition:0.5s;
+    }
+    header nav{
+        position:absolute; top:0%; left:0%;
+        width:100%;
+         height:100vh;
+    }
+    header nav ul{
+        display:flex; flex-direction:column; 
+         margin:auto; top:20%; 
+        position:absolute; left:50%;
+        transform:translateX(-50%);
+    }
+    header ul li{
+        margin-bottom:30px;
+    }
+    header ul li a{
+       padding:4px 600px; transition:0.3s;
+    }
+    header ul li a:hover{
+        background-color:white; color:blue !important;
+    }
+}
+@media (max-width:390px) {
+    .inscription #file,#niveau{
+        display:flex; width:100%; flex-direction:column;
+    }
+}
+@media (max-width:400px) {
+    .home .first{ 
+        font-size:35px;
+    }
+}
+/* iframe pour les cartes de Casablanca , fed , Marrakech */
+iframe{
+    position:absolute; left:50%; transform:translate(-50%);
+    top:20%;
+}
